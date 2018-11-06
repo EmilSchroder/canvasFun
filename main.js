@@ -8,7 +8,7 @@ drawManyChevs = () => {
 
     for (i=0; i < Math.floor(canvas.width/10); i++){
         for(j=2; j < Math.floor(canvas.height/10); j++){
-            drawChev(i*10+1,j*10+1)
+            drawChev(i*10,j*10)
         }
     }
     
