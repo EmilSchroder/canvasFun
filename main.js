@@ -2,23 +2,26 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
+let x = 100
+let y = 100
+
 function drawCircle() {
     ctx.beginPath();
-    ctx.moveTo(20,70)
-    ctx.lineTo(70,20)
-    ctx.lineTo(120,70)
+    ctx.moveTo(x,y)
+    ctx.lineTo(x+5,y-10)
+    ctx.lineTo(x+10,y)
     ctx.strokeStyle = 'red'
     // ctx.fill();
     ctx.stroke()
 }
 
-function draw(){
+function drawChev(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
     drawCircle();
 
 
-    requestAnimationFrame(draw);
+    requestAnimationFrame(drawChev);
 }
 
-draw()
+drawChev()
