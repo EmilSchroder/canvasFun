@@ -18,7 +18,9 @@ document.addEventListener('mousemove', turnChev, false)
 
 function drawChev(x,y) {
     ctx.translate(x+5,y-5)
-    ctx.rotate(0.001)
+    ctx.rotate(0.01)
+    ctx.translate(-x-5,-y+5)
+
     ctx.beginPath();
     ctx.moveTo(x,y)
     ctx.lineTo(x+5,y-10)
